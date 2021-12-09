@@ -23,9 +23,9 @@ public class ObstacleCourse : MonoBehaviour
             waitTime = Random.Range(2f, 5f);
             yield return new WaitForSeconds(waitTime);
             SpawnObstacle();
-            waitTime = Random.Range(2f, 5f);
-            yield return new WaitForSeconds(waitTime);
-            SpawnObstacleOpposite();
+            //waitTime = Random.Range(2f, 5f);
+            //yield return new WaitForSeconds(waitTime);
+            //SpawnObstacleOpposite();
         }
     }
 
