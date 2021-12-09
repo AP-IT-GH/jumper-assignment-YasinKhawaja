@@ -2,31 +2,58 @@
     "Jumper": {
         "checkpoints": [
             {
-                "steps": 9447,
-                "file_path": "results\\Jumper2\\Jumper\\Jumper-9447.onnx",
+                "steps": 217707,
+                "file_path": "results\\Jumper2\\Jumper\\Jumper-217707.onnx",
                 "reward": null,
-                "creation_time": 1639063865.53639,
+                "creation_time": 1639066466.647887,
                 "auxillary_file_paths": [
-                    "results\\Jumper2\\Jumper\\Jumper-9447.pt"
+                    "results\\Jumper2\\Jumper\\Jumper-217707.pt"
                 ]
             },
             {
-                "steps": 50001,
-                "file_path": "results\\Jumper2\\Jumper\\Jumper-50001.onnx",
+                "steps": 219327,
+                "file_path": "results\\Jumper2\\Jumper\\Jumper-219327.onnx",
                 "reward": null,
-                "creation_time": 1639064229.789971,
+                "creation_time": 1639066587.9531512,
                 "auxillary_file_paths": [
-                    "results\\Jumper2\\Jumper\\Jumper-50001.pt"
+                    "results\\Jumper2\\Jumper\\Jumper-219327.pt"
+                ]
+            },
+            {
+                "steps": 220686,
+                "file_path": "results\\Jumper2\\Jumper\\Jumper-220686.onnx",
+                "reward": null,
+                "creation_time": 1639066712.456315,
+                "auxillary_file_paths": [
+                    "results\\Jumper2\\Jumper\\Jumper-220686.pt"
+                ]
+            },
+            {
+                "steps": 223437,
+                "file_path": "results\\Jumper2\\Jumper\\Jumper-223437.onnx",
+                "reward": null,
+                "creation_time": 1639066791.4617512,
+                "auxillary_file_paths": [
+                    "results\\Jumper2\\Jumper\\Jumper-223437.pt"
+                ]
+            },
+            {
+                "steps": 225783,
+                "file_path": "results\\Jumper2\\Jumper\\Jumper-225783.onnx",
+                "reward": null,
+                "creation_time": 1639066838.0540426,
+                "auxillary_file_paths": [
+                    "results\\Jumper2\\Jumper\\Jumper-225783.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 50001,
+            "steps": 225783,
             "file_path": "results\\Jumper2\\Jumper.onnx",
             "reward": null,
-            "creation_time": 1639064229.789971,
+            "creation_time": 1639066838.0540426,
             "auxillary_file_paths": [
-                "results\\Jumper2\\Jumper\\Jumper-50001.pt"
+                "results\\Jumper2\\Jumper\\Jumper-225783.pt"
             ]
         }
     },

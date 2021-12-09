@@ -8,8 +8,9 @@ public class ObstacleCourse : MonoBehaviour
     public GameObject obstacleOpposite;
     public GameObject obstacleSpawner;
     public GameObject obstacleSpawner2;
-    private float waitTime = 0f;
     private bool spawn = true;
+    [SerializeField]
+    private bool secondSpawner = false;
 
     private void OnEnable()
     {
@@ -20,12 +21,15 @@ public class ObstacleCourse : MonoBehaviour
     {
         while (spawn)
         {
-            waitTime = Random.Range(2f, 5f);
+            var waitTime = Random.Range(10f, 13f);
             yield return new WaitForSeconds(waitTime);
             SpawnObstacle();
-            //waitTime = Random.Range(2f, 5f);
-            //yield return new WaitForSeconds(waitTime);
-            //SpawnObstacleOpposite();
+            if (secondSpawner)
+            {
+                waitTime = Random.Range(8f, 10f);
+                yield return new WaitForSeconds(waitTime);
+                SpawnObstacleOpposite();
+            }
         }
     }
 

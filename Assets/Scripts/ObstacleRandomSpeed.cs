@@ -5,13 +5,18 @@ using UnityEngine;
 public class ObstacleRandomSpeed : MonoBehaviour
 {
     [SerializeField]
-    private float _obstacleSpeed = 0f;
+    private float _obstacleSpeed = 4.5f;
+    [SerializeField]
+    private bool randomSpeed = false;
     private JumpAgent agent;
 
     void Start()
     {
         agent = GameObject.Find("Agent").GetComponent<JumpAgent>();
-        _obstacleSpeed = Random.Range(3, 6);
+        if (randomSpeed)
+        {
+            _obstacleSpeed = Random.Range(3, 6);
+        }
     }
 
     void Update()
