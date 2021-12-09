@@ -9,15 +9,24 @@
                 "auxillary_file_paths": [
                     "results\\jumper\\Jumper\\Jumper-65649.pt"
                 ]
+            },
+            {
+                "steps": 82848,
+                "file_path": "results\\Jumper\\Jumper\\Jumper-82848.onnx",
+                "reward": null,
+                "creation_time": 1639063228.2406192,
+                "auxillary_file_paths": [
+                    "results\\Jumper\\Jumper\\Jumper-82848.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 65649,
-            "file_path": "results\\jumper\\Jumper.onnx",
+            "steps": 82848,
+            "file_path": "results\\Jumper\\Jumper.onnx",
             "reward": null,
-            "creation_time": 1639056464.154218,
+            "creation_time": 1639063228.2406192,
             "auxillary_file_paths": [
-                "results\\jumper\\Jumper\\Jumper-65649.pt"
+                "results\\Jumper\\Jumper\\Jumper-82848.pt"
             ]
         }
     },
