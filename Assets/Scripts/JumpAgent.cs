@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
@@ -12,12 +10,11 @@ public class JumpAgent : Agent
     [SerializeField]
     private TextMeshPro score;
     private ObstacleCourse obstacleCourse;
-    private Rigidbody rigidbody;
+    private Rigidbody m_Rigidbody;
     private bool jump = true;
-
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        m_Rigidbody = GetComponent<Rigidbody>();
         obstacleCourse = GetComponentInParent<ObstacleCourse>();
     }
 
@@ -29,7 +26,7 @@ public class JumpAgent : Agent
     public override void OnEpisodeBegin()
     {
         obstacleCourse.ClearEnvironment();
-        transform.localPosition = new Vector3(0, 0.5f, 0);
+        transform.localPosition = new Vector3(0, 0.75f, 0);
         transform.localRotation = Quaternion.Euler(0, 90, 0f);
     }
 
@@ -58,7 +55,7 @@ public class JumpAgent : Agent
     {
         if (this.jump)
         {
-            rigidbody.AddForce(new Vector3(0, jumpSpeed, 0), ForceMode.VelocityChange);
+            m_Rigidbody.AddForce(new Vector3(0, jumpSpeed, 0), ForceMode.VelocityChange);
             this.jump = false;
         }
     }

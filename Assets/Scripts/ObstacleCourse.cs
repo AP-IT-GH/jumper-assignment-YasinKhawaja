@@ -1,13 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleCourse : MonoBehaviour
 {
     public GameObject obstacle;
     public GameObject obstacleOpposite;
-    public GameObject obstacleSpawner;
+    public GameObject obstacleSpawner1;
     public GameObject obstacleSpawner2;
+
     private bool spawn = true;
     [SerializeField]
     private bool secondSpawner = false;
@@ -36,7 +36,7 @@ public class ObstacleCourse : MonoBehaviour
     private void SpawnObstacle()
     {
         GameObject newObstacle = Instantiate(obstacle.gameObject);
-        newObstacle.transform.SetParent(obstacleSpawner.transform);
+        newObstacle.transform.SetParent(obstacleSpawner1.transform);
         newObstacle.transform.localPosition = new Vector3(1.5f, 0.5f, -8);
     }
 
@@ -50,7 +50,7 @@ public class ObstacleCourse : MonoBehaviour
     public void ClearEnvironment()
     {
         spawn = false;
-        foreach (Transform obstacle in obstacleSpawner.transform)
+        foreach (Transform obstacle in obstacleSpawner1.transform)
         {
             GameObject.Destroy(obstacle.gameObject);
         }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleRandomSpeed : MonoBehaviour
@@ -9,7 +7,6 @@ public class ObstacleRandomSpeed : MonoBehaviour
     [SerializeField]
     private bool randomSpeed = false;
     private JumpAgent agent;
-
     void Start()
     {
         agent = GameObject.Find("Agent").GetComponent<JumpAgent>();
