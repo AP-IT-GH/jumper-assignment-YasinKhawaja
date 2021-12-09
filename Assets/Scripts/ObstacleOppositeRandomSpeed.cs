@@ -7,6 +7,7 @@ public class ObstacleOppositeRandomSpeed : MonoBehaviour
     [SerializeField]
     private bool randomSpeed = false;
     private JumpAgent agent;
+
     void Start()
     {
         agent = GameObject.Find("Agent").GetComponent<JumpAgent>();
