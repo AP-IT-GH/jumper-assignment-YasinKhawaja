@@ -8,6 +8,7 @@ Als <ins>extra</ins> scenario hebben we gekozen voor de **4<sup>de</sup>** funct
 ## Observaties
 De *agent* kan de omgeving observeren met *rays*, of stralen. Dit wordt gedaan door aan de *agent* de *Ray Perception Sensor 3D*-component te geven. 
 Deze component geeft de *agent* ogen, in de vorm van stralen, en geeft de mogelijkheid om zijn 3D-omgeving te verkennen door middel van *raycasting*.
+![](Assets/Images/MicrosoftTeams-image (1).png)
 ## Acties
 Om obstakels te kunnen ontwijken, moet de *agent* kunnen springen. Hierdoor heeft de *agent* maar één mogelijke actie.
 * 1 verticale actie: springen.
@@ -26,9 +27,9 @@ SANDER?
 ## Resultaten
 SANDER?
 ## Conclusie
-De *agent* die we trainde om over een blokje dat constant vanuit dezelfde richting met verschillende snelheden aankomt te springen, is gelukt in ongeveer 1 miljoen stappen. Dit was de originele opdracht, als extra hebben wij dit vanuit beide richtingen laten komen en probeerden wij de agent dit aan te leren om over een blokje dat op 1/2 locaties constant spawned met verschillende snelheid te sprigen, was dit na ~5.486.000 stappen nog niet gelukt om het consistent te doen.  
-De neurale netwerken zijn terug te vinden in *Assets* &rarr; *NeuralNetworks*.  
+De *agent* die we trainde om over een blokje dat constant vanuit dezelfde richting met verschillende snelheden aankomt te springen, is gelukt in ongeveer 1 miljoen stappen. Dit was de originele opdracht, als extra hebben wij dit vanuit beide richtingen laten komen en probeerden wij de agent dit aan te leren om over een blokje dat op 1/2 locaties constant spawned met verschillende snelheid te sprigen, was dit na ~5.486.000 stappen nog niet gelukt om het consistent te doen.
 
+De neurale netwerken zijn terug te vinden in *Assets* &rarr; *NeuralNetworks*.
 * Het *Jumper1Direction*-brein is voor scenario 1.
 * Het *Jumper2Directions*-brein is voor scenario 2.
 
