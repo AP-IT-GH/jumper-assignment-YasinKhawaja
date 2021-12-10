@@ -4,7 +4,7 @@ Er wordt een *agent* getraind om over obstakels te springen.
 ### Scenario 1
 Voor de 1<sup>ste</sup> scenario hebben we gekozen voor de **1<sup>ste</sup>** functionaliteit bij de opdrachtomschrijving, namelijk dat de *agent* geconfronteerd wordt met een rij van continu bewegende obstakels en over deze moet springen.
 ### Scenario 2
-Voor de 2<sup>de</sup> scenario hebben we gekozen voor de **4<sup>de</sup>** functionaliteit bij de opdrachtomschrijving, namelijk dat de *agent* op het midden van een platform staat en obstakels moet ontwijken, die vanuit twee richtingen komen, door er over te springen.
+Als <ins>extra</ins> scenario hebben we gekozen voor de **4<sup>de</sup>** functionaliteit bij de opdrachtomschrijving, namelijk dat de *agent* op het midden van een platform staat en obstakels moet ontwijken, die vanuit twee richtingen komen, door er over te springen.
 ## Observaties
 De *agent* kan de omgeving observeren met *rays*, of stralen. Dit wordt gedaan door aan de *agent* de *Ray Perception Sensor 3D*-component te geven. 
 Deze component geeft de *agent* ogen, in de vorm van stralen, en geeft de mogelijkheid om zijn 3D-omgeving te verkennen door middel van *raycasting*.
