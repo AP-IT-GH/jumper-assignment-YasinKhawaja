@@ -280,10 +280,40 @@ Het object kan met de *agent* of een *border* in aanraking komen, indien de spel
             Destroy(this.gameObject);
         }
     }
-```  
+```
 ## Configuratie
-SANDER?
+Voor het leerproces van de *agent*, hebben we de volgende *yaml*-configuratie gebruikt. 
+```{r}
+behaviors:
+  Jumper:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 32
+      buffer_size: 256
+      learning_rate: 0.0001
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: false
+      hidden_units: 20
+      num_layers: 1
+      vis_encode_type: simple
+    reward_signals:
+      extrinsic:
+        gamma: 0.9
+        strength: 1.0
+    keep_checkpoints: 20
+    max_steps: 10000000
+    time_horizon: 3
+    summary_freq: 2000
+    threaded: true
+```
+Dit bestand bestaat uit algemene trainingconfiguraties voor de *Jumper agent*. De training is van het type *PPO*, kan maximaal 10 miljoen stappen duren en moet elke 2.000 stappen een samenvatting geven. Daarnaast kan dit proces meerdere *threads* gebruiken en moet 20 *checkpoints* houden. De *hyperparameters* bepalen hoe het netwerk wordt getraind en de *network settings* bepalen hoe het netwerkstructuur eruit moet zien. Wij hebben voor maar één verborgen laag met 20 *units* gekozen aangezien de *agent* geen complexe acties moet uitvoeren.
 
+Meer informatie over elke variabele kun je hier vinden: [*Training Configuration File*](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-Configuration-File.md)
 ## Resultaten
 * Scenario 1: De *agent* die we trainden om over een blokje dat constant vanuit dezelfde richting met verschillende snelheden aankomt te springen (scenario 1), is gelukt in ongeveer **1 miljoen** stappen. Dit was de originele opdracht, als extra hebben we obstakels vanuit beide richtingen laten komen.
 * Scenario 2: We probeerden de *agent* aan te leren om over een blokje, dat op 1 van de 2 locaties *spawned* met een variabele snelheid, heen te springen. Dit was na **~5.486.000** stappen nog niet gelukt. De *agent* kon niet consisten over beiden blokken heen springen.
