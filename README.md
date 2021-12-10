@@ -1,6 +1,9 @@
 # Jumper - The Unit
 ## Inleiding
-Er wordt een *agent* getraind om over obstakels te springen.  
+Er wordt een *agent* getraind om over obstakels te springen.
+### Scenario 1
+De *agent* wordt geconfronteerd met een rij van continu bewegende obstakels en moet over deze springen.
+### Scenario 2
 De *agent* staat op het midden van een platform en moet obstakels ontwijken, die vanuit twee richtingen komen, door er over te springen.
 ## Observaties
 De *agent* kan de omgeving observeren met *rays*, of stralen. Dit wordt gedaan door aan de *agent* de *Ray Perception Sensor 3D*-component te geven. 
