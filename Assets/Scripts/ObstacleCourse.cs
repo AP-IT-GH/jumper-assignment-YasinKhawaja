@@ -21,12 +21,12 @@ public class ObstacleCourse : MonoBehaviour
     {
         while (spawn)
         {
-            var waitTime = Random.Range(10f, 13f);
+            var waitTime = Random.Range(3f, 5f);
             yield return new WaitForSeconds(waitTime);
             SpawnObstacle();
             if (secondSpawner)
             {
-                waitTime = Random.Range(8f, 10f);
+                waitTime = Random.Range(3f, 5f);
                 yield return new WaitForSeconds(waitTime);
                 SpawnObstacleOpposite();
             }

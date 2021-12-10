@@ -15,7 +15,7 @@ public class ObstacleRandomSpeed : MonoBehaviour
         agent = GameObject.Find("Agent").GetComponent<JumpAgent>();
         if (randomSpeed)
         {
-            _obstacleSpeed = Random.Range(3, 6);
+            _obstacleSpeed = Random.Range(4, 6);
         }
     }
 

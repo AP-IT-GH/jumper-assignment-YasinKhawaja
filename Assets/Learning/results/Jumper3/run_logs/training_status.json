@@ -1,0 +1,65 @@
+{
+    "Jumper": {
+        "checkpoints": [
+            {
+                "steps": 999999,
+                "file_path": "results\\Jumper3\\Jumper\\Jumper-999999.onnx",
+                "reward": null,
+                "creation_time": 1639085215.6103268,
+                "auxillary_file_paths": [
+                    "results\\Jumper3\\Jumper\\Jumper-999999.pt"
+                ]
+            },
+            {
+                "steps": 1499997,
+                "file_path": "results\\Jumper3\\Jumper\\Jumper-1499997.onnx",
+                "reward": null,
+                "creation_time": 1639086585.0353162,
+                "auxillary_file_paths": [
+                    "results\\Jumper3\\Jumper\\Jumper-1499997.pt"
+                ]
+            },
+            {
+                "steps": 1783035,
+                "file_path": "results\\Jumper3\\Jumper\\Jumper-1783035.onnx",
+                "reward": null,
+                "creation_time": 1639087360.7694197,
+                "auxillary_file_paths": [
+                    "results\\Jumper3\\Jumper\\Jumper-1783035.pt"
+                ]
+            },
+            {
+                "steps": 1783293,
+                "file_path": "results\\Jumper3\\Jumper\\Jumper-1783293.onnx",
+                "reward": null,
+                "creation_time": 1639087670.372584,
+                "auxillary_file_paths": [
+                    "results\\Jumper3\\Jumper\\Jumper-1783293.pt"
+                ]
+            },
+            {
+                "steps": 1793526,
+                "file_path": "results\\Jumper3\\Jumper\\Jumper-1793526.onnx",
+                "reward": null,
+                "creation_time": 1639087922.1190257,
+                "auxillary_file_paths": [
+                    "results\\Jumper3\\Jumper\\Jumper-1793526.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1793526,
+            "file_path": "results\\Jumper3\\Jumper.onnx",
+            "reward": null,
+            "creation_time": 1639087922.1190257,
+            "auxillary_file_paths": [
+                "results\\Jumper3\\Jumper\\Jumper-1793526.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.10.0"
+    }
+}
