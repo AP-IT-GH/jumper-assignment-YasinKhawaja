@@ -309,7 +309,7 @@ PrefabInstance:
     - target: {fileID: 3020803716046439230, guid: fdd2a20eece1f7e45bc9a7e779bb78db, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 7f9be8ba2b432414fb0bff6b0f829bda, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 18be9fdf1a013cd45861fd0edfdb018f, type: 3}
     - target: {fileID: 3020803716046439230, guid: fdd2a20eece1f7e45bc9a7e779bb78db, type: 3}
       propertyPath: m_UseChildSensors
       value: 1
@@ -320,8 +320,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3020803717367294066, guid: fdd2a20eece1f7e45bc9a7e779bb78db, type: 3}
       propertyPath: secondSpawner
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3020803717367294066, guid: fdd2a20eece1f7e45bc9a7e779bb78db, type: 3}
+      propertyPath: obstacleSpawner1
+      value: 
+      objectReference: {fileID: 3020803716491378139}
     - target: {fileID: 3020803717367294076, guid: fdd2a20eece1f7e45bc9a7e779bb78db, type: 3}
       propertyPath: m_Name
       value: ObstacleCourse
@@ -376,3 +380,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdd2a20eece1f7e45bc9a7e779bb78db, type: 3}
+--- !u!1 &3020803716491378139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3020803716187881828, guid: fdd2a20eece1f7e45bc9a7e779bb78db, type: 3}
+  m_PrefabInstance: {fileID: 3020803716491378138}
+  m_PrefabAsset: {fileID: 0}
