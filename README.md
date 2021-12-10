@@ -233,7 +233,54 @@ Dit is het scorebord dat bijhoud hoeveel punten de agent behaald, dit houdt dus 
 ### BorderDespawn
 Beide *BorderDespawn* objecten hebben geen *Mesh Renderer*, hun nut is om de objecten die voorbij de agent zijn geraakt te vernietigen. Dit gebeurt aan de hand van een *OnColission* script dat de obstakels hebben, hier later meer over.  
 ### Obstakels
-
+Dit zijn de objecten die geinstantieerd worden en naar de *agent* toe gaan. Er zijn twee soorten obstakels namelijk *Obstacle* en *ObstacleOpposite* aangezien deze op andere locaties geladen worden en elks een eigen script hebben dat momenteel identiek is aan elkaar. Toch hebben we dit onderscheiden in het geval dat we een van de twee obstakel types anders wouden zoals een andere willekeurige snelheid of dergelijke. Aangezien deze momenteel identiek zijn wordt er maar 1 van de scripts uitgelegd.
+#### ObstacleRandomSpeed.cs
+Dit script dient vooral om een obstakel een willekeurige snelheid te geven.
+* Hiervoor hebben we de volgende inputs nodig:
+```{r}
+    // Standaard obstakel snelheid, deze kan aangepast worden. Wordt momenteel niet gebruikt aangezien we een willekeurige snelheid kiezen
+    [SerializeField]
+    private float _obstacleSpeed = 4.5f;
+    
+    // Standaard waarde of er een willekeurige snelheid gebruikt moet worden, deze wordt aangezet in het unity project maar staat standaard op *false*
+    [SerializeField]
+    private bool randomSpeed = false;
+    
+    // Referentie naar de script van de agent
+    private JumpAgent agent;
+```
+* Start()
+Hierin zoeken we naar de *agent* zijn *agent* component in dit geval is dit van het type *JumpAgent* dit hebben we nodig om later een beloning aan de agent toe te wijzen. Verder bepalen we de willekeurige snelheid indien nodig, dus wanneer de *randomSpeed* waarde *true* is. Let op dit zijn int waarden en geen float waarde dus is de willekeurige waarde 4 of 5, als dit een float waarde was telt de *upper bound* wel mee dus 4f, 6f geeft een *float* waarde tussen 4f en 6f weer.
+```{r}
+void Start()
+    {
+        agent = GameObject.Find("Agent").GetComponent<JumpAgent>();
+        if (randomSpeed)
+        {
+            _obstacleSpeed = Random.Range(4, 6);
+        }
+    }
+```
+* Update()
+De *Update* methode gebruiken we om het obstakel te laten bewegen, het is een lokale positie dus zal de beweging afhangen van de rotatie van het object. Deze rotatie werd op voorhand bepaalt door de *ObcstacleSpawner* in een bepaalde rotatie te plaatsen. In dit project zal het een positieve waarde op z-as nodig hebben om richting de kubus te bewegen, dit is ook het geval voor *ObstacleOppositeRandomSpeed* aangezien de spawner daar in de tegenovergestelde richting is geroteerd.
+```{r}
+    void Update()
+    {
+        transform.localPosition += new Vector3(0, 0, _obstacleSpeed * Time.deltaTime);
+    }
+```
+* OnCollisonEnter(Collision collision)
+Het object kan met de *agent* of een *border* in aanraking komen, indien de speler het object raakt wordt het vernietigt zoals we in de *JumpAgent* klasse zagen. Indien het obstakel in aanraking komt met een *border*, dit zijn de onzichtbare objecten dat achter de kubus staan, zal het obstakel vernietigt worden en krijgt de agent 1 bonus punt. Aangezien een obstakel enkel en alleen bij een *border* kan geraken als de agent succesvol over het object heen heeft gesprongen.
+```{r}
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("Border"))
+        {
+            agent.AddReward(1f);
+            Destroy(this.gameObject);
+        }
+    }
+```  
 ## Configuratie
 SANDER?
 
