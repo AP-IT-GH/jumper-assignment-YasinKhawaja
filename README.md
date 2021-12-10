@@ -19,4 +19,8 @@ Tijdens het leerproces, moet de *agent* weten of die goed aan het presteren is o
 ## Spelverloop
 Text
 ## Configuratie
-Text
+SANDER?
+## Resultaten
+SANDER?
+## Conclusie
+SANDER?
