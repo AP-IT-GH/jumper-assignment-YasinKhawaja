@@ -26,4 +26,9 @@ SANDER?
 ## Resultaten
 SANDER?
 ## Conclusie
-SANDER?
+De *agent* die we trainde om over een blokje dat constant vanuit dezelfde richting met verschillende snelheden aankomt te springen, is gelukt in ongeveer 1 miljoen stappen. Dit was de originele opdracht, als extra hebben wij dit vanuit beide richtingen laten komen en probeerden wij de agent dit aan te leren om over een blokje dat op 1/2 locaties constant spawned met verschillende snelheid te sprigen, was dit na ~5.486.000 stappen nog niet gelukt om het consistent te doen.  
+De neurale netwerken zijn terug te vinden in *Assets* &rarr; *NeuralNetworks*.
+* De *Jumper1Direction*-brein is voor scenario 1.
+* De *Jumper2Directions*-brein is voor scenario 2.
+
+Hiervoor werd respectievelijk gebruik gemaakt van de *Jumper4* en *JumperV5* folders binnen *Learning* &rarr; *results*.  
