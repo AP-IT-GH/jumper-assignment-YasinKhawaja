@@ -16,9 +16,10 @@ Deze component geeft de *agent* ogen, in de vorm van stralen, en geeft de mogeli
 ![alt ChildRays](Assets/Images/ChildRays.png)
 
 ## Acties
-Om obstakels te kunnen ontwijken, moet de *agent* kunnen springen. Hierdoor heeft de *agent* maar twee mogelijke acties.
+Om obstakels te kunnen ontwijken, moet de *agent* kunnen springen.  
+Hierdoor heeft de *agent* maar twee mogelijke acties:
 
-* Stilstaan
+* stilstaan;
 * 1 verticale actie: springen.
 
 Om de *agent* te kunnen laten springen, gebruiken we de *Rigidbody*-component. Met deze component, kan een object reageren op fysica. Deze component is ook best gebruikt met een *Collider*-component, in dit geval een *Box Collider*, om botsingen te detecteren.  
@@ -315,8 +316,8 @@ Dit bestand bestaat uit algemene trainingconfiguraties voor de *Jumper agent*. D
 
 Meer informatie over elke variabele kun je hier vinden: [*Training Configuration File*](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-Configuration-File.md)
 ## Resultaten
-* Scenario 1: De *agent* die we trainden om over een blokje dat constant vanuit dezelfde richting met verschillende snelheden aankomt te springen (scenario 1), is gelukt in ongeveer **1 miljoen** stappen. Dit was de originele opdracht, als extra hebben we obstakels vanuit beide richtingen laten komen.
-* Scenario 2: We probeerden de *agent* aan te leren om over een blokje, dat op 1 van de 2 locaties *spawned* met een variabele snelheid, heen te springen. Dit was na **~5.486.000** stappen nog niet gelukt. De *agent* kon niet consisten over beiden blokken heen springen.
+* Scenario 1: De *agent* die we trainden om over een blokje te springen dat constant vanuit dezelfde richting met verschillende snelheden aankomt, is gelukt in ongeveer **1 miljoen** stappen. Dit was de originele opdracht, als extra hebben we obstakels vanuit beide richtingen laten komen.
+* Scenario 2: Wij probeerden de *agent* aan te leren om over een blokje, dat op één van de twee locaties *spawnet* met een variabele snelheid, heen te springen. Dit was na **~5.5 miljoen** stappen nog niet gelukt. De *agent* kon niet consistent over beiden blokken heen springen.
 
 De neurale netwerken zijn terug te vinden in *Assets* &rarr; *NeuralNetworks*.
 * Het *Jumper1Direction*-brein is voor scenario 1.
@@ -325,5 +326,5 @@ De neurale netwerken zijn terug te vinden in *Assets* &rarr; *NeuralNetworks*.
 Hiervoor werd respectievelijk gebruik gemaakt van de *Jumper4* en *JumperV5* folders binnen *Assets* &rarr; *Learning* &rarr; *results*.
 
 ## Conclusie
-* De agent kon, na 1 miljoen stappen, consistent (6% faal kans) over een obstakel vanuit 1 richting met een variabele snelheid springen. En verkreeg altijd een positieve cumulatieve beloning.
-* De agent kon **niet**, na ongeveer 5.486.000 stappen, consistent over een obstakel dat vanuit 2 verschillende richtingen met variabele snelheden springen. Deze kreeg na een langere periode een positieve cumulatieve beloning, maar was niet voldoende om nooit een negatieve cumulatieve beloning te verkrijgen.
+* De agent kon, na 1 miljoen stappen, consistent (6% faal kans) over een obstakel vanuit één richting met een variabele snelheid springen en verkreeg altijd een positieve cumulatieve beloning.
+* De agent kon **niet**, na ongeveer 5.486.000 stappen, consistent over een obstakel dat vanuit twee verschillende richtingen met variabele snelheden springen. Deze kreeg na een langere periode een positieve cumulatieve beloning, maar was niet voldoende om nooit een negatieve cumulatieve beloning te verkrijgen.
