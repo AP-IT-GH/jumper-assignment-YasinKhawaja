@@ -295,3 +295,5 @@ De neurale netwerken zijn terug te vinden in *Assets* &rarr; *NeuralNetworks*.
 Hiervoor werd respectievelijk gebruik gemaakt van de *Jumper4* en *JumperV5* folders binnen *Assets* &rarr; *Learning* &rarr; *results*.
 
 ## Conclusie
+* De agent kon, na 1 miljoen stappen, consistent (6% faal kans) over een obstakel vanuit 1 richting met een variabele snelheid springen. En verkreeg altijd een positieve cumulatieve beloning.
+* De agent kon **niet**, na ongeveer 5.486.000 stappen, consistent over een obstakel dat vanuit 2 verschillende richtingen met variabele snelheden springen. Deze kreeg na een langere periode een positieve cumulatieve beloning, maar was niet voldoende om nooit een negatieve cumulatieve beloning te verkrijgen.
