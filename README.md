@@ -33,4 +33,4 @@ De neurale netwerken zijn terug te vinden in *Assets* &rarr; *NeuralNetworks*.
 * Het *Jumper1Direction*-brein is voor scenario 1.
 * Het *Jumper2Directions*-brein is voor scenario 2.
 
-Hiervoor werd respectievelijk gebruik gemaakt van de *Jumper4* en *JumperV5* folders binnen *Learning* &rarr; *results*.  
+Hiervoor werd respectievelijk gebruik gemaakt van de *Jumper4* en *JumperV5* folders binnen *Assets* &rarr; *Learning* &rarr; *results*.  
