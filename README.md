@@ -270,7 +270,7 @@ De *Update* methode gebruiken we om het obstakel te laten bewegen, het is een lo
     }
 ```
 * OnCollisonEnter(Collision collision)
-Het object kan met de *agent* of een *border* in aanraking komen, indien de speler het object raakt wordt het vernietigt zoals we in de *JumpAgent* klasse zagen. Indien het obstakel in aanraking komt met een *border*, dit zijn de onzichtbare objecten dat achter de kubus staan, zal het obstakel vernietigt worden en krijgt de agent 1 bonus punt. Aangezien een obstakel enkel en alleen bij een *border* kan geraken als de agent succesvol over het object heen heeft gesprongen.
+Het object kan met de *agent* of een *border* in aanraking komen, indien de speler het object raakt wordt het vernietigt zoals we in de *JumpAgent* klasse zagen. Indien het obstakel in aanraking komt met een *border*, dit zijn de onzichtbare objecten dat achter de kubus staan, zal het obstakel vernietigt worden en krijgt de *agent* 1 bonus punt. Aangezien een obstakel enkel en alleen bij een *border* kan geraken als de agent succesvol over het object heen heeft gesprongen.
 ```{r}
     private void OnCollisionEnter(Collision collision)
     {
