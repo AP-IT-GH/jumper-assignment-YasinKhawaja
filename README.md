@@ -285,7 +285,8 @@ Het object kan met de *agent* of een *border* in aanraking komen, indien de spel
 SANDER?
 
 ## Resultaten
-De *agent* die we trainden om over een blokje dat constant vanuit dezelfde richting met verschillende snelheden aankomt te springen (scenario 1), is gelukt in ongeveer **1 miljoen** stappen. Dit was de originele opdracht, als extra hebben we dit vanuit beide richtingen laten komen en probeerden we de *agent* dit aan te leren om over een blokje dat op 1/2 locaties constant spawned met verschillende snelheid te springen, was dit na **~5.486.000** stappen nog niet gelukt om het consistent te doen.
+* Scenario 1: De *agent* die we trainden om over een blokje dat constant vanuit dezelfde richting met verschillende snelheden aankomt te springen (scenario 1), is gelukt in ongeveer **1 miljoen** stappen. Dit was de originele opdracht, als extra hebben we obstakels vanuit beide richtingen laten komen.
+* Scenario 2: We probeerden de *agent* aan te leren om over een blokje, dat op 1 van de 2 locaties *spawned* met een variabele snelheid, heen te springen. Dit was na **~5.486.000** stappen nog niet gelukt. De *agent* kon niet consisten over beiden blokken heen springen.
 
 De neurale netwerken zijn terug te vinden in *Assets* &rarr; *NeuralNetworks*.
 * Het *Jumper1Direction*-brein is voor scenario 1.
