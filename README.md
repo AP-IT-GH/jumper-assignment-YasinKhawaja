@@ -11,4 +11,12 @@ Om obstakels te kunnen ontwijken, moet de *agent* kunnen springen. Hierdoor heef
 
 Om de *agent* te kunnen laten springen, gebruiken we de *Rigidbody*-component. Met deze component, kan een object reageren op fysica. Deze component is ook best gebruikt met een *Collider*-component, in dit geval een *Box Collider*, om botsingen te detecteren.  
 Wij gebruiken de *Rigidbody* om aan de *agent* een verticale kracht te geven die vervolgens met zwaartekracht terug naar beneden valt.
-## Beloningen
+## Beloning
+Tijdens het leerproces, moet de *agent* weten of die goed aan het presteren is of niet. Dit wordt verwezenlijkt door een beloningssysteem.  
+* Wij belonen de *agent* met **+1** als die over een obstakel kan springen.
+* Als de *agent* niet over een obstakel kan springen en erop landt, krijgt die een straf van **-1**.
+* Ook krijgt de *agent* een klein strafje van **-0.01** als die voor niks springt.
+## Spelverloop
+Text
+## Configuratie
+Text
